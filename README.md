@@ -7,7 +7,7 @@ public void setAnimator(View correct, View next) {
         mAnimatorSet.playTogether(
                 ObjectAnimator.ofFloat(correct, "translationX",
                         0,
-                        ChangeUnits.change(correct.getContext(), correct.getLeft() - correct.getWidth() / 2))
+                        ChangeUnits.change(correct.getContext(), correct.getLeft() - correct.getWidth()))
                 , ObjectAnimator.ofFloat(correct, "rotationY", 180, 90)
         );
     }
