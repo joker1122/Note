@@ -38,3 +38,8 @@ canvas.translate(0, 200);
 staticLayout2.draw(canvas);
 canvas.restore();
 ```
+* StaticLayout(CharSequence source, TextPaint paint, int width, Layout.Alignment align, float spacingmult, float spacingadd, boolean includepad)
+> 1. width 是文字区域的宽度，文字到达这个宽度后就会自动换行；
+> 2. align 是文字的对齐方向；spacingmult 是行间距的倍数，通常情况下填 1 就好；
+> 3. spacingadd 是行间距的额外增加值，通常情况下填 0 就好；
+> 4. includeadd 是指是否在文字上下添加额外的空间，来避免某些过高的字符的绘制出现越界。
