@@ -1,5 +1,5 @@
 # Android 属性动画
-***做 translation 平移动画是以自身为原点***
+## 做 translation 平移动画是以自身为原点
 ```java
 
 public void setAnimator(View correct, View next) {
@@ -11,6 +11,15 @@ public void setAnimator(View correct, View next) {
                 , ObjectAnimator.ofFloat(correct, "rotationY", 180, 90)
         );
     }
+```
+## PropertyValuesHolder 同一个动画中改变多个属性
+```java
+PropertyValuesHolder holder1 = PropertyValuesHolder.ofFloat("scaleX", 1);
+PropertyValuesHolder holder2 = PropertyValuesHolder.ofFloat("scaleY", 1);
+PropertyValuesHolder holder3 = PropertyValuesHolder.ofFloat("alpha", 1);
+
+ObjectAnimator animator = ObjectAnimator.ofPropertyValuesHolder(view, holder1, holder2, holder3)
+animator.start();
 ```
 # canva绘制Text
 * drawText(String text, float x, float y, Paint paint)
