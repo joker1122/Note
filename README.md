@@ -1,5 +1,6 @@
 # Android 属性动画
 ## 做 translation 平移动画是以自身为原点
+！[pic](./)
 ```java
 
 public void setAnimator(View correct, View next) {
