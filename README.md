@@ -1,5 +1,6 @@
 # Android 属性动画
 ## 做 translation 平移动画是以自身为原点
+ ![]( ./textDraw.png )
 ```java
 
 public void setAnimator(View correct, View next) {
