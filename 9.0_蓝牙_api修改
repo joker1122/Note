@@ -1,0 +1,3 @@
+7.0 的BluetoothInputDevice在9.0 换成 BluetoothHidDevice
+
+BluetoothAdapter.getProfileProxy(context, new InputDeviceServiceListener(), BluetoothProfile.HID_DEVICE);
