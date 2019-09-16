@@ -1,0 +1,14 @@
+private static final String ACTION_MASTER_CLEAR = "android.intent.action.MASTER_CLEAR";
+
+Intent intent = new Intent(ACTION_MASTER_CLEAR);
+Class clazz = null;
+try {
+    clazz = Class.forName("android.content.Intent");
+    Field field = clazz.getField("FLAG_RECEIVER_INCLUDE_BACKGROUND");
+    field.setAccessible(true);
+    intent.addFlags(field.getInt(clazz));
+} catch (ClassNotFoundException | NoSuchFieldException | IllegalAccessException e) {
+    e.printStackTrace();
+}
+intent.putExtra(EXTRA_REASON, "MasterClearConfirm");
+getContext().sendBroadcast(intent, "android.permission.MASTER_CLEAR");
